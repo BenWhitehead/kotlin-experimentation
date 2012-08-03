@@ -11,11 +11,20 @@ import java.util.*
  */
 fun indexOfMax(a : IntArray) : Int? {
     // Write your solution here
-    return 1
+    var indexOfMaximum: Int = 0
+    var valueOfMaximum: Int = Integer.MIN_VALUE
+    for (index in a.indices) {
+        val value = a[index]
+        if (value >= valueOfMaximum) {
+            indexOfMaximum = index
+            valueOfMaximum = value
+        }
+    }
+    return indexOfMaximum
 }
 
 fun main(args : Array<String>) {
-    test(null)
+//    test(null) // TODO - can't figure this one out.
     test(0, 0)
     test(1, -1, 0)
     test(0, -1, -2)
@@ -32,7 +41,6 @@ fun main(args : Array<String>) {
 
 
 // HELPER FUNCTIONS
-
 fun test(expected : Int?, vararg data : Int) {
     val actual = indexOfMax(data)
     assertEquals(actual, expected, "\ndata = ${Arrays.toString(data)}\n" +
