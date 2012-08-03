@@ -1,4 +1,4 @@
-package com.github.benwhitehead.kotlin.webdemo.problems.Pairless
+package com.github.benwhitehead.kotlin.webdemo.problems.pairless
 
 import java.util.*
 

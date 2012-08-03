@@ -1,4 +1,4 @@
-package com.github.benwhitehead.kotlin.webdemo.problems
+package com.github.benwhitehead.kotlin.webdemo.problems.sum
 
 import java.util.*
 
@@ -11,7 +11,11 @@ import java.util.*
  */
 fun sum(a : IntArray) : Int {
     // Write your solution here
-    return 0
+    var sum = 0
+    for (i in a) {
+        sum += i
+    }
+    return sum
 }
 
 fun main(args : Array<String>) {

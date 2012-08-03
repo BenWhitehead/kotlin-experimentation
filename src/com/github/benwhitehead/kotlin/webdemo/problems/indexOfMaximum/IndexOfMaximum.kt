@@ -1,4 +1,4 @@
-package com.github.benwhitehead.kotlin.webdemo.problems
+package com.github.benwhitehead.kotlin.webdemo.problems.indexOfMaximum
 
 import java.util.*
 
