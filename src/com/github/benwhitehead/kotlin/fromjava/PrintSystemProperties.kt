@@ -1,6 +1,5 @@
 package com.github.benwhitehead.kotlin.fromjava
 
-import java.util.Map
 import java.util.Properties
 import java.util.TreeMap
 
@@ -10,9 +9,9 @@ import java.util.TreeMap
 public open class PrintSystemProperties() {
     class object {
         public open fun main(args: Array<String>): Unit {
-            val properties: Properties? = System.getProperties()
-            val props: Map<String, String> = TreeMap()
-            for (entry in properties?.entrySet()) {
+            val properties: Properties = System.getProperties()!!
+            val props: MutableMap<String, String> = TreeMap()
+            for (entry in properties.entrySet()!!.iterator()) {
                 var key: String = ""
                 var value: String = ""
                 if (entry?.getKey() is String?) {
